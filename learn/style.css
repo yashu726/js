@@ -1,0 +1,82 @@
+.game-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-mode {
+    margin-bottom: 20px;
+}
+
+.game-mode button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.game-mode button:hover {
+    background-color: #3e8e41;
+}
+
+.time-remaining {
+    margin-bottom: 20px;
+}
+
+.time-remaining p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.colors {
+    margin-bottom: 20px;
+}
+
+.color-button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+}
+
+.color-button:hover {
+    background-color: #aaa;
+}
+
+.multipliers {
+    margin-bottom: 20px;
+}
+
+.multiplier-button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+}
+
+.multiplier-button:hover {
+    background-color: #aaa;
+}
+
+.game-result {
+    margin-top: 20px;
+}
+
+.game-result p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+}

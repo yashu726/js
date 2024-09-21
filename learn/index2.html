@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outer, Inner, and Sibling</title>
+  <style>
+    /* Style for the outer container */
+    .outer-container {
+      border: 2px solid #333;
+      padding: 10px;
+    }
+
+    /* Style for the inner container */
+    .inner-container {
+      background-color: #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Style for the sibling elements */
+    .sibling {
+      background-color: #f5f5f5;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Outer container -->
+  <div class="outer-container">
+    <!-- Inner container -->
+    <div class="inner-container">
+      Inner Container
+    </div>
+    
+    <!-- Sibling elements -->
+    <div class="sibling">Sibling 1</div>
+    <div class="sibling">Sibling 2</div>
+    <div class="sibling">Sibling 3</div>
+  </div>
+
+</body>
+</html>
