@@ -9,7 +9,7 @@ const dc_heros = ["superman","flash","batman"]
 
 //  console.log(allHeros);
 
- const all_new_heros = [...marvel_heros, ...dc_heros]  /// spred oprator
+ const all_new_heros = [...marvel_heros, ...dc_heros]  /// It is used the most spread  oprater
 
 //  console.log(all_new_heros);
 
