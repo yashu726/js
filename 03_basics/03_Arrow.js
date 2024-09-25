@@ -2,6 +2,7 @@
 
 //  browser ke andar jo object hai wo window object hai
 
+
 const user = {
     username : "yash",
     price : 190,
@@ -20,6 +21,7 @@ const user = {
 
 // user.welcomeMassege()
 // console.log(this);
+
 
 
 // function one() {
@@ -62,5 +64,21 @@ const addTwo = (num1,num2) =>{
 
 
 console.log(addThree(2,3));
+
+// diffrence this key word regular function and arrow function
+
+function regFun() {
+    console.log(this); // this got some value
+    
+}
+
+ regFun()
+
+const regArrow = () => {
+    console.log(this);   // this empty object {}
+    
+}
+
+regArrow()
 
 
