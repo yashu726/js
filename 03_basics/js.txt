@@ -1,0 +1,100 @@
+  1.                       javascript Execution Context
+ jo bhi file bnayi hai use javascript run/Execute kese kregi
+
+
+ 2. js ki jo bhi file vah globle Execution Context to bnta hi bnta hai. jaha pr bhi globle Execution Context bnta wo usko refer kr diya jata hai
+        ek variable ko   jo hai "this" 
+        this variable me us globle Execution Context rakh diya jata hai
+
+3.  browser ka globle Execution Context alag hota hai or   node Enviroment ka alag hota hai
+    browser ka jyada important hota hai
+    browser me this ki value window object aati hai
+    globle Execution to hoga hi hoga chahe usme value hai ya nhi ho
+
+ 4.  3 type of Execution Context
+      (i). globle Execution Context
+      (ii). function Execution Context
+      (iii). Eval Execution Context
+
+5.  javascript code two phase me Run/Execution Hoti hai
+        (i). Memory Creation phase ya (Memory phase)
+        (ii). Execution phase 
+
+6.  diffrence between Memory Creation phase and Execution phase 
+        Memory Creation phase => Memory Creation phase me sirf aapke variable jo bhi aapne declear kiya hai unke liye jagh allocate hoti hai
+        unko Execute Nhi Kiya Jata Hai 
+
+         Execution phase => Execution phase me mathematical function +, - , * yah sab Execution phase me hota hai 
+
+ 7.  Exaple
+        let val1 = 10;
+        let val2 = 5;
+        function addNum(num1,num2){
+            let total = num1 + num2
+            return total;
+        }
+        let result 1 = addNum(val1,val2)
+        let result2 = addNum(10,2)
+
+      Run Step By Step
+
+        1. globle Execution 
+                ↓
+              this
+                ↓
+          All Program
+
+        2. Memory Creation phase
+            Sabhi Variable ko Store Kiya Jata Hai
+         
+           val1 -> undefind  first time me undefind hi rkha jata hai   -------> line no. 30
+           val2 -> undefind                 -------> line no. 31
+           addNum -> function ki defination all part of function  (only declear kiya hai)      -------> line no. 32 To 35
+           result1 -> undefind         -------> line no 36 
+
+        3.Execution phase
+          val1 -> 10 
+          val2 -> 5
+          addNum (apna ek alag Execution Context bnata hai )  ---- > line no. 7
+           addNum -> ☐  Executional Creation ready
+           new Executional Creation me ek new variable Enviroment bnega or  ek Execution Thread
+           jitni bar bhi function Execute hote hai itni bar new box bnte hai Executional Creation usko khte haio new Executional Context
+           es box me alag se  variable Enviroment send box bnaya jata hai  or ek Execution Thread bnya jata hai jis se aapke jitne bhi Execution 
+           ho jitne bhi kam ho wo sare hote hai.
+           new box bnne se 2 kam fir se honge Memory Creation phase or Execution phase yah addNum ke liye Execute hoga 
+           new box Executional Creation ka kam hone ke bad me delete bhi ho jata hai
+    globle sirf ek bar hi define hota hai 
+
+
+
+
+8. Call Stack => 
+     Call Stack me globle Execution to hoga hi hoga 
+
+
+
+comment notes
+
+The working of the JavaScript works on three phases:
+1. Global Execution Context
+2. Memory phase / Creation phase
+3. Execution phase
+
+Phase 1: Global Execution Context
+The value of `this` keyword is set to Global Execution Context (which is an empty Object in NODE environment, & window object in browser 
+environment)
+
+Phase 2: Memory phase
+During this phase, JS engine scans the code and assigns the initial values for the variables , functions, etc.. 
+For variables they are 'undefined' and for functions they are set to their function definition
+
+Phase 3: Execution phase
+After the creation phase completed, the execution phase begins where actual values of the variables are set.
+And when the functions are called it creates a new 'Function Execution' context which consists of two phases 
+(they works same as explained above but only for the particular function scope):
+
+1. Memory phase 
+2. Execution phase 
+The return value of the 'Function Execution' context is passed to the Global Execution Context
+
+
