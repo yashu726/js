@@ -81,4 +81,8 @@ const regArrow = () => {
 
 regArrow()
 
+//  Normal function ka khud ka context hota h
+//  Or arrow function ka khud context ni hota h
+//  Vo parent function ya classs se leta h
+
 
